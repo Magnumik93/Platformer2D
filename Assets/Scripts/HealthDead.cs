@@ -1,26 +1,21 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class HealthDead : MonoBehaviour
 {
-    public GameObject healthBar;
-    private int score = 5;
-    private SpriteRenderer sr;
-    private float move;
-    private Rigidbody2D rb;
+    private SpriteRenderer _sr;
+    private float _move;
+    private Rigidbody2D _rb;
     
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+        _rb = GetComponent<Rigidbody2D>();
+        _sr = GetComponent<SpriteRenderer>();
     }
-
+    
     private void Update()
     {
-        if (sr.flipX == true) move = 1;
-        else move = -1;
-
+        if (_sr.flipX == true) _move = 1;
+        else _move = -1;
     }
 
     private void OnCollisionEnter2D(Collision2D game)
@@ -28,25 +23,22 @@ public class HealthDead : MonoBehaviour
         if (game.gameObject.tag == "Dead")
         {
             HealthBar.Health();
-            sr.color = Color.red; 
+            _sr.color = Color.red; 
             Invoke("Collor",0.3f);
             PushAway(transform.position, 200f);
-
         }
-
-        
     }
 
     private void Collor()
     {
-        sr.color = Color.white;
+        _sr.color = Color.white;
     }
 
     public void PushAway(Vector3 pushFrom, float pushPower)
     {
-        if(rb == null||pushPower == 0) return;
-        pushFrom.x -= move;
+        if(_rb == null||pushPower == 0) return;
+        pushFrom.x -= _move;
         var pushDirection = (pushFrom - transform.position).normalized;
-        rb.AddForce((-pushDirection * pushPower));
+        _rb.AddForce((-pushDirection * pushPower));
     }
 }

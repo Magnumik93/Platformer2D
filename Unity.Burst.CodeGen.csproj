@@ -316,19 +316,19 @@
      <HintPath>A:\unity\2022.3.9f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
-     <HintPath>A:\MyProjects\Platformer2D\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+     <HintPath>A:\Новая папка\Platformer2D\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>A:\MyProjects\Platformer2D\Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>A:\Новая папка\Platformer2D\Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>A:\MyProjects\Platformer2D\Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>A:\Новая папка\Platformer2D\Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>A:\MyProjects\Platformer2D\Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>A:\Новая папка\Platformer2D\Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>A:\MyProjects\Platformer2D\Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>A:\Новая папка\Platformer2D\Library\PackageCache\com.unity.burst@1.8.8\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="mscorlib">
      <HintPath>A:\unity\2022.3.9f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>
