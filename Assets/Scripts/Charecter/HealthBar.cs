@@ -3,16 +3,18 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public GameObject character;
+    public static GameObject character;
 
     //private float health = 100f;
     private static Scrollbar sb;
     private ColorBlock block;
-    public GameObject panel;
+    public static GameObject panel;
     
-    // Start is called before the first frame update
+    
     void Start()
     {
+        character = GameObject.FindWithTag("Player");
+        panel = GameObject.Find("GameOverPanel");
         sb = GetComponent<Scrollbar>(); 
         block = sb.colors;
         block.normalColor = Color.green;
@@ -48,10 +50,9 @@ public class HealthBar : MonoBehaviour
             sb.colors = block;
         }
 
-        if (sb.size == 0)
+        if (sb.size == 0 || character.transform.position.y < -19f)
         {
-            panel.gameObject.SetActive(true);
-            character.gameObject.SetActive(false);
+            CharecterDead.Dead();
         }
     }
 

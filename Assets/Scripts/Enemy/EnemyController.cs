@@ -1,6 +1,3 @@
-using System;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -22,21 +19,6 @@ public class EnemyController : MonoBehaviour
         transform.position += new Vector3(move, 0, 0) * speed * Time.deltaTime;
     }
 
-    private void OnCollisionExit2D(Collision2D triger)
-    {
-        if (triger.gameObject.tag=="Trigger")
-        {
-                move *= -1;
-            
-
-            if (move < 0) sr.flipX = false;
-            else
-            {
-                sr.flipX = true;
-            }
-        }
-    }
-
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player")
@@ -44,6 +26,20 @@ public class EnemyController : MonoBehaviour
             move *= -1;
             if (sr.flipX == true) sr.flipX = false;
             else sr.flipX = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D triger)
+    {
+        if (triger.CompareTag("Trigger"))
+        {
+            move *= -1;
+
+            if (move < 0) sr.flipX = false;
+            else
+            {
+                sr.flipX = true;
+            }
         }
     }
 }

@@ -1,34 +1,52 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class Camera : MonoBehaviour
 {
-    [SerializeField] private GameObject charecter;
-    [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private GameObject pouse;
+    private GameObject _charecter;
+    private GameObject _gameOverPanel;
+    private GameObject _pause;
     
-    [SerializeField] private float zoom = -10f;
-    
-    void Start()
+    private float _zoom = -10f;
+
+    private void Awake()
     {
-        gameOverPanel.SetActive(false);
-        charecter.SetActive(true);
-        pouse.SetActive(false);
+        _charecter = GameObject.FindWithTag("Player");
+        _gameOverPanel = GameObject.Find("GameOverPanel");
+        _pause = GameObject.Find("PauseMenu");
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+        }
     }
 
-    void FixedUpdate()
+    private void Start()
     {
-        transform.position = charecter.transform.position;
+        if (_gameOverPanel.activeInHierarchy == true)
+        {
+            _gameOverPanel.SetActive(false);
+        }
+
+        if (_pause.activeInHierarchy == true)
+        {
+            _pause.SetActive(false);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        transform.position = _charecter.transform.position;
         var vector3 = transform.position;
-        vector3.z = zoom;
+        vector3.z = _zoom;
         transform.position = vector3;
     }
 
-    public void OnClic()
+    public void OnClick()
     {
         if (Time.timeScale == 1)
             Time.timeScale = 0;
         
-        pouse.SetActive(true);
+        _pause.SetActive(true);
     }
 }

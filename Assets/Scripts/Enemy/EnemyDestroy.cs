@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class EnemyDestroy : MonoBehaviour
 {
-    public GameObject pref;
-    private Rigidbody2D rb;
+    [SerializeField] private GameObject pref;
+    private Rigidbody2D _rigidbody2D;
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
-    
 
     private void OnCollisionStay2D(Collision2D charecter)
     {
-        if (charecter.gameObject.tag == "Player")
+        if (charecter.gameObject.CompareTag("Player"))
         {
             GameObject.Destroy(pref);
-            Debug.Log("DEstr");
         }
     }
-
-    
 }

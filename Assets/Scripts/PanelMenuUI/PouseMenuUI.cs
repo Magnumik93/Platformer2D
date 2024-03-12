@@ -6,13 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class PouseMenuUI : MonoBehaviour
 {
-    [SerializeField] private PouseMenuUI pouseMenu;
-
-    private void Awake()
-    {
-        gameObject.SetActive(false);
-    }
-
     public void OnMenu()
     {
         SceneManager.LoadScene(0);

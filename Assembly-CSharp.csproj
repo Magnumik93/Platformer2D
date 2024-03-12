@@ -45,22 +45,33 @@
     <Analyzer Include="A:\unity\2022.3.9f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Interactivity\HiddenInteractivity.cs" />
+     <Compile Include="Assets\Scripts\Interfase\INum.cs" />
      <Compile Include="Assets\Scripts\MainMenu\Menu.cs" />
+     <Compile Include="Assets\Scripts\StartFinish\Finish.cs" />
      <Compile Include="Assets\Scripts\Charecter\CharecterMove.cs" />
-     <Compile Include="Assets\Scripts\Charecter\HealthDead.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyController.cs" />
      <Compile Include="Assets\Scripts\MainMenu\GameOver.cs" />
      <Compile Include="Assets\Scripts\Charecter\HealthBar.cs" />
      <Compile Include="Assets\Scripts\MainMenu\InfoMenu.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyDestroy.cs" />
+     <Compile Include="Assets\Scripts\Interactivity\FireActivated.cs" />
+     <Compile Include="Assets\Scripts\Charecter\TakeDamage.cs" />
      <Compile Include="Assets\Scripts\Charecter\Camera.cs" />
      <Compile Include="Assets\Scripts\PanelMenuUI\PouseMenuUI.cs" />
      <Compile Include="Assets\Scripts\MainMenu\OptionMenu.cs" />
+     <Compile Include="Assets\Scripts\Interfase\IBox.cs" />
+     <Compile Include="Assets\Scripts\Charecter\CharecterDead.cs" />
+     <Compile Include="Assets\Scripts\Interactivity\Cave.cs" />
+     <Compile Include="Assets\Scripts\Charecter\SpawnBox.cs" />
+     <Compile Include="Assets\Scripts\StartFinish\StartSpawn.cs" />
+     <Compile Include="Assets\Scripts\Interactivity\Fire.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Library\PackageCache\com.unity.modules.jsonserialize@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.test-framework@1.1.33" />
+     <Folder Include="Assets\Animatoin\StartFinish" />
      <None Include="Library\PackageCache\com.unity.modules.screencapture@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.modules.cloth@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -92,6 +103,7 @@
      <None Include="Library\PackageCache\com.unity.modules.tilemap@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.assetbundle@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.burst@1.8.8\Tests" />
+     <Folder Include="Assets\Scripts\Interfase" />
      <None Include="Library\PackageCache\com.unity.burst@1.8.8\ValidationConfig.json" />
      <None Include="Library\PackageCache\com.unity.timeline@1.7.5\package.json" />
      <Folder Include="Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom" />
@@ -139,6 +151,7 @@
      <None Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.subsystems@1.0.0" />
      <None Include="Library\PackageCache\com.unity.ide.rider@3.0.24\package.json" />
+     <Folder Include="Assets\Scripts\StartFinish" />
      <None Include="Library\PackageCache\com.unity.modules.video@1.0.0\package.json" />
      <None Include="Library\PackageCache\com.unity.test-framework@1.1.33\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.unityanalytics@1.0.0" />
@@ -148,6 +161,7 @@
      <Folder Include="Library\PackageCache\com.unity.modules.vr@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.2d.common@8.0.1\Path" />
+     <Folder Include="Assets\Animatoin\Charecter" />
      <None Include="Library\PackageCache\com.unity.modules.particlesystem@1.0.0\package.json" />
      <Folder Include="Library\PackageCache\com.unity.modules.wind@1.0.0" />
      <None Include="Library\PackageCache\com.unity.modules.physics2d@1.0.0\package.json" />
@@ -163,6 +177,7 @@
      <None Include="Library\PackageCache\com.unity.2d.common@8.0.1\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Library\PackageCache\com.unity.ide.visualstudio@2.0.18\ValidationExceptions.json" />
+     <Folder Include="Assets\Scripts\Interactivity" />
      <None Include="Library\PackageCache\com.unity.modules.wind@1.0.0\package.json" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests" />
@@ -193,6 +208,7 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap@1.0.0\Tests" />
      <None Include="Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0\package.json" />
+     <Folder Include="Assets\Animatoin\AnimSaw" />
      <None Include="Library\PackageCache\com.unity.feature.2d@2.0.0\package.json" />
      <Folder Include="Assets\Sounds" />
      <None Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Editor Resources\Shaders\TMP_SDF_SSD.cginc" />
@@ -229,6 +245,7 @@
      <None Include="Library\PackageCache\com.unity.2d.spriteshape@9.0.2\package.json" />
      <None Include="Library\PackageCache\com.unity.mathematics@1.2.6\ValidationExceptions.json" />
      <Folder Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Package Resources" />
+     <Folder Include="Assets\Animatoin\Charecter\MainMenu" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <Folder Include="Library\PackageCache\com.unity.modules.terrain@1.0.0" />
      <Folder Include="Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1\Tests" />
