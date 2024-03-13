@@ -13,7 +13,7 @@ public class EnemyDestroy : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D charecter)
     {
-        if (charecter.gameObject.CompareTag("Player"))
+        if (charecter.gameObject.GetComponent<CharecterMove>() != null)
         {
             GameObject.Destroy(pref);
         }

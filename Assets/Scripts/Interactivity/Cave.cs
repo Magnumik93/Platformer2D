@@ -16,7 +16,7 @@ public class Cave : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && count == 0)
+        if (other.GetComponent<CharecterMove>() != null && count == 0)
         {
             alarm.SetActive(true);
             count += 1;

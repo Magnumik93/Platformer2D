@@ -24,14 +24,14 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.GetComponent<CharecterMove>() != null)
         {
             OnFinish();
         }
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.GetComponent<CharecterMove>() != null)
         {
             if(_charecterMove.enabled == true)
                 _charecterMove.enabled = false;

@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.GetComponent<CharecterMove>() != null)
         {
             move *= -1;
             if (sr.flipX == true) sr.flipX = false;
